@@ -1,10 +1,13 @@
 import { useState } from "react";
-import {wordCount} from "./utils/wordCount";
+import { wordCount } from "./utils/wordCount";
 import { orderWordCount } from "./utils/orderWordCount";
-import WordList from "./components/WordList";
+import { arrayConverter } from "./utils/arrayConverter";
+import WordTable from "./components/WordTable";
 
 const App = () => {
   const [textarea, setTextarea] = useState("Input text here");
+  const [isCounterTriggered, setIsCounterTriggered] = useState(false);
+  const [orderedArray, setOrderedArray] = useState([]);
 
   const updateTextarea = (event) => {
     setTextarea(event.target.value);
@@ -13,11 +16,13 @@ const App = () => {
   const countButtonHandler = (e) => {
     e.preventDefault();
     let arr = textarea.toString();
-    arr = arr.split(" ")
+    arr = arr.split(" ");
     const wordcount = wordCount(arr);
     const finalArray = orderWordCount(wordcount);
-    console.log(finalArray);
-    
+    const testArray = arrayConverter(finalArray);
+    //console.log(testArray);
+    setOrderedArray(testArray);
+    setIsCounterTriggered(true);
   };
 
   return (
@@ -37,16 +42,15 @@ const App = () => {
             cols="30"
             rows="10"
             onChange={updateTextarea}
-            value = {textarea}
+            value={textarea}
             //onClick={updateTextInput}
-          >
-          </textarea>
+          ></textarea>
           <button className="input-button" onClick={countButtonHandler}>
             Count words
           </button>
         </div>
       </form>
-      <WordList />
+      {isCounterTriggered && <WordTable orderedArray={orderedArray} />}
     </div>
   );
 };
