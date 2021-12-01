@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {wordCount} from "./utils/wordCount";
 import { orderWordCount } from "./utils/orderWordCount";
+import WordList from "./components/WordList";
 
 const App = () => {
   const [textarea, setTextarea] = useState("Input text here");
@@ -45,6 +46,7 @@ const App = () => {
           </button>
         </div>
       </form>
+      <WordList />
     </div>
   );
 };
