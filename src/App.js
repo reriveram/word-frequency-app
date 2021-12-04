@@ -15,42 +15,49 @@ const App = () => {
 
   const countButtonHandler = (e) => {
     e.preventDefault();
-    let arr = textarea.toString();
-    arr = arr.split(" ");
-    const wordcount = wordCount(arr);
-    const finalArray = orderWordCount(wordcount);
-    const testArray = arrayConverter(finalArray);
-    //console.log(testArray);
-    setOrderedArray(testArray);
-    setIsCounterTriggered(true);
+    if (textarea.trim() !== "") {
+      let arr = textarea.toString();
+      arr = arr.split(" ");
+      const wordcount = wordCount(arr);
+      const finalArray = orderWordCount(wordcount);
+      const testArray = arrayConverter(finalArray);
+      //console.log(testArray);
+      setOrderedArray(testArray);
+      setIsCounterTriggered(true);
+    } else {
+    }
   };
 
   return (
     <div className="App">
-      <h1 className="title">Word Frequency App!</h1>
-      <h3 className="description">
-        Let´s see how many words are in you´re text!{" "}
-      </h3>
-      <form className="input-form">
-        <p className="input-label">Input text here:</p>
-        <div className="input-div">
-          {/* <input className="input-text" type="text" placeholder="Input you´re text here" required /> */}
-          <textarea
-            className="input-text"
-            name="input-words"
-            id="input-text"
-            cols="30"
-            rows="10"
-            onChange={updateTextarea}
-            value={textarea}
-            //onClick={updateTextInput}
-          ></textarea>
-          <button className="input-button" onClick={countButtonHandler}>
+      <header>
+        <h1>
+          <span>Word</span> <span className="title__freq">Frequency</span>{" "}
+          <span>App</span>
+        </h1>
+        <h3 className="subtitle">
+          Let´s see how many words are in you´re text!{" "}
+        </h3>
+      </header>
+      <form className="form">
+        <textarea
+          className="textarea"
+          name="input-words"
+          id="input-text"
+          cols="30"
+          rows="10"
+          onChange={updateTextarea}
+          value={textarea}
+        ></textarea>
+        {textarea.trim() !== "" && (
+          <button className="button" onClick={countButtonHandler}>
             Count words
           </button>
-        </div>
+        )}
       </form>
-      {isCounterTriggered && <WordTable orderedArray={orderedArray} />}
+      <footer>
+        {isCounterTriggered && <WordTable orderedArray={orderedArray} />}
+      </footer>
     </div>
   );
 };

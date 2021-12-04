@@ -1,0 +1,27 @@
+/* Font-colors
+#17252a
+#2B7A78
+#3aafa9
+#DEF2F1
+#feffff */
+
+.table {
+  width: 70%;
+  background-color: #feffff;
+  border-radius: 0.3em;
+}
+
+.title {
+  background-color: #17252a;
+  font-size: 1.2em;
+}
+
+.tableHeads {
+  color: #feffff;
+  text-align: left;
+  padding: 0.5em 0.5em;
+}
+
+.tableRow {
+    
+}

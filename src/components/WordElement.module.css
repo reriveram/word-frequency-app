@@ -1,0 +1,26 @@
+/* Font-colors
+#17252a
+#2B7A78
+#3aafa9
+#DEF2F1
+#feffff */
+
+.rank {
+  font-size: 1.2em;
+  text-align: left;
+  width: 15%;
+  padding: 0.2em 0.7em;
+}
+
+.times {
+  font-size: 1.2em;
+  text-align: left;
+  width: 15%;
+  padding: 0.2em 0.7em;
+}
+
+.word {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0.2em 0.7em;
+}
