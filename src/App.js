@@ -5,7 +5,6 @@ import { arrayConverter } from "./utils/arrayConverter";
 import WordTable from "./components/WordTable";
 
 const App = () => {
-  
   const [textarea, setTextarea] = useState("Input text here");
   const [isCounterTriggered, setIsCounterTriggered] = useState(false);
   const [orderedArray, setOrderedArray] = useState([]);
