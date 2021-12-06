@@ -5,6 +5,7 @@ import { arrayConverter } from "./utils/arrayConverter";
 import WordTable from "./components/WordTable";
 
 const App = () => {
+  
   const [textarea, setTextarea] = useState("Input text here");
   const [isCounterTriggered, setIsCounterTriggered] = useState(false);
   const [orderedArray, setOrderedArray] = useState([]);
@@ -13,8 +14,8 @@ const App = () => {
     setTextarea(event.target.value);
   };
 
-  const countButtonHandler = (e) => {
-    e.preventDefault();
+  const countButtonHandler = (event) => {
+    event.preventDefault();
     if (textarea.trim() !== "") {
       let arr = textarea.toString();
       arr = arr.split(" ");
