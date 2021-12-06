@@ -5,7 +5,6 @@
 #DEF2F1
 #feffff */
 
-
 body {
   font-size: 16px;
   display: flex;
@@ -18,9 +17,6 @@ body {
   background-color: #3aafa9;
   color: #17252a;
 }
-
-
-
 
 header {
   font-size: 3em;
@@ -88,7 +84,7 @@ h1 {
   box-shadow: 0 0 #999;
 }
 
-footer{
+footer {
   display: flex;
   align-items: center;
   flex-direction: column;
