@@ -1,9 +1,15 @@
-<h1 align="center">Welcome to word-frequency-app 👋</h1>
+<h1 align="center">Word-frequency-app</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Word Frequency is an app that counts the times each word appears in the submited text and then shows it in a rank. 
+<br>
+<p>
+<img alt="Demo" src="./docs/demo.gif" align="center" />
+</p>
+<br>
+
+> Word Frequency is an app that counts the times each word appears in the submited text and then shows it in a rank.
 
 ## Install
 
@@ -16,23 +22,20 @@ npm install
 ```sh
 npm run start
 ```
-
-## Run tests
-
-```sh
-npm run test
-```
+<br>
+<br>
 
 ## Author
 
 👤 **Rodrigo Rivera**
 
-* Github: [@reriveram](https://github.com/reriveram)
-* LinkedIn: [@rriveram](https://linkedin.com/in/rriveram)
+- Github: [@reriveram](https://github.com/reriveram)
+- LinkedIn: [@rriveram](https://linkedin.com/in/rriveram)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
