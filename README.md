@@ -31,11 +31,3 @@ npm run start
 
 - Github: [@reriveram](https://github.com/reriveram)
 - LinkedIn: [@rriveram](https://linkedin.com/in/rriveram)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

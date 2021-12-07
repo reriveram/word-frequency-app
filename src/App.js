@@ -16,9 +16,11 @@ const App = () => {
   const countButtonHandler = (event) => {
     event.preventDefault();
     if (textarea.trim() !== "") {
-      let arr = textarea.toString();
-      arr = arr.split(" ");
-      const wordcount = wordCount(arr);
+      let text = textarea.toString();
+      const replace_symbols = /,|!|\.|-|_|/gi;
+      text = text.replace(replace_symbols,"");
+      const array_text = text.split(" ");
+      const wordcount = wordCount(text);
       const finalArray = orderWordCount(wordcount);
       const testArray = arrayConverter(finalArray);
       //console.log(testArray);
