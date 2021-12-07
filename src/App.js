@@ -13,8 +13,8 @@ const App = () => {
     setTextarea(event.target.value);
   };
 
-  const countButtonHandler = (e) => {
-    e.preventDefault();
+  const countButtonHandler = (event) => {
+    event.preventDefault();
     if (textarea.trim() !== "") {
       let arr = textarea.toString();
       arr = arr.split(" ");
